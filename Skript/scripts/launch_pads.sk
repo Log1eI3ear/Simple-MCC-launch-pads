@@ -1,0 +1,36 @@
+#Launch the player and make a sound when a player jumps on a launch pad
+on jump:
+  if block below player is red concrete:
+    wait 0.1 seconds
+    push player in horizontal direction of player with speed 2
+    push player up at speed 1
+    #play sound "entity.experience_orb.pickup" with volume 0.5 to the player
+
+
+#Launch the player and make a sound when a player jumps on a mega launch pad
+on jump:
+  if block below player is orange concrete:
+    wait 0.1 seconds
+    push player in horizontal direction of player with speed 3
+    push player up at speed 1.5
+    #play sound "entity.experience_orb.pickup" with volume 0.5 to the player
+
+
+#Make a sound when the player jumps on a jump pad
+on jump:
+  if block below player is emerald block:
+    send "&2You jumped on jump pad!"
+    #play sound "entity.experience_orb.pickup" with volume 0.5 to the player
+
+
+#Launch the player forward when the player is in an aqua launcher
+on join:
+  wait 1 tick
+  while player is alive:
+    loop all blocks in radius 4 around the player:
+      if block in player is water:
+        if loop-block is a red concrete:
+          if event-player's x coord is between {_loc1} x coord and {_loc2} x coord:
+            push player in horizontal direction of player with speed 3
+            #play sound "entity.experience_orb.pickup" with volume 0.5 to the player
+            wait 1 second
