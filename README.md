@@ -1,2 +1,2 @@
 # Simple-MCC-launch-pads
-Download this file and put it straight into your Minecraft server's "plugins" folder
+Download the "bStats" and "Skript" folder and drag and drop them straight into your Minecraft server's "plugins" folder
